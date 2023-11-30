@@ -42,7 +42,11 @@ test:
 
 production:
   <<: *default
-  database: myapp_production
+  <<: *default
+  database: rails_production
+  username: root
+  password: password-example
+  socket: /var/lib/mysql/mysql.sock
 
 
 
