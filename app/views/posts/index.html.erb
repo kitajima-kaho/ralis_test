@@ -1,0 +1,12 @@
+<div><%= link_to "投稿ページ", new_post_path %></div>
+
+<% @posts.each do |post| %>
+  <div>
+    <div><%= post.memo %></div>
+    <%= post.created_at %>
+    <div><% if post.image? %>
+      <%= image_tag post.image.url, size: '200x200' %>
+    <% end %>
+    </div>
+  </div>
+<% end %>
