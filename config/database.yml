@@ -25,12 +25,12 @@
 #   database: storage/production.sqlite3
 
 default: &default
-  adapter: mysql2
-  encoding: utf8
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: test-user
-  password: password-example
-  socket: /tmp/mysql.sock
+adapter: mysql2
+  database: rails-test
+  username: admin
+  password: nakajitsu
+  host: test-hugkum.ccfqu25wqnkh.ap-northeast-1.rds.amazonaws.com
+  port: 3306
 
 development:
   <<: *default
@@ -41,7 +41,6 @@ test:
   database: myapp_test
 
 production:
-  <<: *default
   <<: *default
   database: rails_production
   username: root
