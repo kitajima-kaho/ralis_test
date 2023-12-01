@@ -26,7 +26,7 @@
 
 default: &default
 adapter: mysql2
-  database: rails-test
+  database: railstest
   username: admin
   password: nakajitsu
   host: test-hugkum.ccfqu25wqnkh.ap-northeast-1.rds.amazonaws.com
@@ -39,13 +39,6 @@ development:
 test:
   <<: *default
   database: myapp_test
-
-production:
-  <<: *default
-  database: rails_production
-  username: root
-  password: password-example
-  socket: /var/lib/mysql/mysql.sock
 
 
 
